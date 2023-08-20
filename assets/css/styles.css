@@ -1401,7 +1401,7 @@ body.dark-theme {
     right: -0.75rem;
   }
 
-  .about__container, .section-title-1 {
+  .about__container .section-title-1 {
     align-self: flex-end;
     margin-inline: 0;
   }
