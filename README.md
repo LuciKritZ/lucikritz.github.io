@@ -1,2 +1,0 @@
-# lucikritz.github.io
-Portfolio
