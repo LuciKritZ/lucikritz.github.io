@@ -164,6 +164,6 @@ sr.reveal(
   }
 );
 
-sr.reveal(`.services__card, .projects__card`, {
+sr.reveal(`.services__card, .projects__card, .experience__card`, {
   interval: 100,
 });
