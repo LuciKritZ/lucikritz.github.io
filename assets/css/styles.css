@@ -462,7 +462,6 @@ body.dark-theme {
   top: 0;
   bottom: 0;
   margin: auto 0px;
-  display: grid;
 }
 
 .home__social-link {
@@ -473,7 +472,7 @@ body.dark-theme {
   display: grid;
   place-items: center;
   transition: background-color 0.3s;
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
 }
 
 .home__social-link:hover {
