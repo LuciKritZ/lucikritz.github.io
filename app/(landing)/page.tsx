@@ -15,7 +15,7 @@ import Experience from './_pages/experience';
 import Projects from './_pages/projects';
 import ContactMe from './_pages/contact-me';
 
-export const getLandingPageData = async (): Promise<LandingPageProps> => {
+const getLandingPageData = async (): Promise<LandingPageProps> => {
   const myInfo: LandingPageProps['myInfo'] = await fetchMyInfo();
   const experiences: LandingPageProps['experiences'] = await fetchExperiences();
   const projects: LandingPageProps['projects'] = await fetchProjects();
@@ -44,6 +44,11 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
   };
 };
 
+/**
+ * @see https://github.com/vercel/next.js/issues/49578
+ */
+export const runtime = 'edge';
+
 export default async function LandingPage() {
   // @see https://react.dev/reference/react/use
   const landingPageData = await getLandingPageData();
@@ -54,7 +59,7 @@ export default async function LandingPage() {
       condition={!!landingPageData}
       render={
         <div className='bg-[#191919] text-[#e7e7e7] h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 custom-scrollbar'>
-          <NavBar socials={socials} email={myInfo.email} />
+          <NavBar socials={socials} />
 
           <main>
             <section id='hero' className='snap-center'>

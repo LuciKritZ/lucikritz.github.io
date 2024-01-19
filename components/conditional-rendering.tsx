@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { GenericReactElement } from '@/types/react.types';
+import { GenericReactElement } from '@/typings';
 
 interface ConditionalRenderingProps {
   condition: boolean;

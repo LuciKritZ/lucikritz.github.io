@@ -6,11 +6,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 type NavBarProps = {
-  email: string;
   socials: Social[];
 };
 
-export default function NavBar({ email, socials }: NavBarProps) {
+export default function NavBar({ socials }: NavBarProps) {
   return (
     <header className='sticky top-0 flex flex-row justify-between max-w-7xl mx-auto z-40 xl:items-center p-5'>
       <div className='flex flex-row items-center'>
