@@ -17,15 +17,14 @@ const HeroImage = ({ image, name }: HeroImageProps) => {
         opacity: 1,
         animation: 'ease-in-out',
       }}
-      className='relative rounded-full h-[20vh] w-[20vh] max-h-40 max-w-40 mx-auto'
+      className='relative rounded-full w-[20vh] h-[20vh] mx-auto overflow-hidden'
     >
       <Image
-        className='object-cover'
+        className='fixed object-fill'
         priority
         src={image}
         alt={name}
-        width={300}
-        height={300}
+        fill
       />
     </motion.div>
   );

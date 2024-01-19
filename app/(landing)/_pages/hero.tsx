@@ -25,7 +25,7 @@ export default function Hero({ info, image = '' }: HeroProps) {
   });
 
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden pb-[10vh]'>
+    <div className='h-screen flex flex-col space-y-[1vh] items-center justify-center text-center overflow-hidden pb-[10vh]'>
       <BackgroundDesign />
       <HeroImage name={name} image={image} />
       <div className='z-20'>
@@ -42,6 +42,11 @@ export default function Hero({ info, image = '' }: HeroProps) {
           <Cursor cursorColor='#e17e7e' />
         </h1>
         <div className='pt-[2vh]'>
+          <Link href={info.resumeLink} target='_blank'>
+            <button className={cn('hero-nav-btn', poorStory.className)}>
+              Resume
+            </button>
+          </Link>
           {NAV_BTN_OPTIONS.map(({ id, name }) => (
             <Link key={id} href={id}>
               <button className={cn('hero-nav-btn', poorStory.className)}>
