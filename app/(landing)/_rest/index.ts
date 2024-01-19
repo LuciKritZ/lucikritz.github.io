@@ -20,6 +20,10 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
     experiences: experiences.map((experience) => ({
       ...experience,
       companyImageUrl: generateImageUrl(experience.companyImage),
+      techTags: experience.techTags.map((techTag) => ({
+        ...techTag,
+        imageUrl: generateImageUrl(techTag.image),
+      })),
     })),
     projects: projects.map((project) => ({
       ...project,
@@ -31,7 +35,6 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
     })),
     skills: skills.map((skill) => ({
       ...skill,
-      imageUrl: generateImageUrl(skill.image),
     })),
     socials,
   };

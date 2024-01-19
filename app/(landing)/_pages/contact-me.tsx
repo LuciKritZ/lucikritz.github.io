@@ -60,27 +60,27 @@ const ContactMe = ({ email, phone, socials }: ContactMeProps) => {
   };
 
   return (
-    <SectionContainer className='text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center w-screen'>
+    <SectionContainer className='flex overflow-hidden flex-col text-left md:flex-row justify-evenly mx-auto items-center z-0 truncate'>
       <SectionHeader>Hit me up!</SectionHeader>
 
-      <div className='flex flex-col mt-44 space-y-10 justify-end items-center mx-10'>
-        <div className='flex flex-col space-y-4'>
-          <div className='flex items-center space-x-5'>
-            <PhoneIcon className='text-[#e17e7e] h-7 w07 animate-pulse' />
-            <p className='text-2xl'>{phone}</p>
+      <div className='flex flex-col mt-[18vh] space-y-[4vh] justify-end items-center mx-[5vh] max-h-[80vh] overflow-y-auto'>
+        <div className='flex flex-col space-y-[2vh]'>
+          <div className='flex items-center space-x-[1vh]'>
+            <PhoneIcon className='text-[#e17e7e] h-[3vh] animate-pulse' />
+            <p className='text-[2.5vh]'>{phone}</p>
           </div>
 
-          <div className='flex items-center space-x-5'>
-            <EnvelopeIcon className='text-[#e17e7e] h-7 w07 animate-pulse' />
-            <p className='text-2xl'>{email}</p>
+          <div className='flex items-center space-x-[1vh]'>
+            <EnvelopeIcon className='text-[#e17e7e] h-[3vh] animate-pulse' />
+            <p className='text-[2.5vh]'>{email}</p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex flex-col space-y-2 mx-auto md:w-fit w-full'
+          className='flex flex-col space-y-[1.5vh] mx-auto md:w-fit w-full'
         >
-          <div className='flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0'>
+          <div className='flex flex-col md:flex-row md:space-x-[1.5vh] space-y-[1.5vh] md:space-y-0'>
             <input
               {...register('name', { required: true })}
               placeholder='Name'
@@ -113,7 +113,7 @@ const ContactMe = ({ email, phone, socials }: ContactMeProps) => {
 
           <button
             type='submit'
-            className='border border-[#E17E7E] py-5 px-10 rounded-md text-white font-bold text-lg hover:bg-[#E17E7E] transition-all duration-300 ease-linear'
+            className='text-[2.5vh] px-[1.5vh] py-[1.5vh] border border-[#E17E7E] rounded-md text-white font-bold hover:bg-[#E17E7E] transition-all duration-300 ease-linear'
           >
             Submit
           </button>
@@ -126,7 +126,6 @@ const ContactMe = ({ email, phone, socials }: ContactMeProps) => {
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ duration: 1 + (index + 1) * 0.05 }}
               key={_id}
-              className='hidden md:block'
             >
               <SocialIcon
                 href={link}
@@ -134,7 +133,7 @@ const ContactMe = ({ email, phone, socials }: ContactMeProps) => {
                 network={title.toLowerCase().trim()}
                 fgColor='#e17e7e'
                 bgColor='white'
-                className='cursor-pointer'
+                className='cursor-pointer social-media-icon'
               />
             </motion.div>
           ))}

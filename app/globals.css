@@ -4,7 +4,7 @@
 
 @layer components {
   .hero-nav-btn {
-    @apply mobile-sm:text-lg mobile-sm:px-2 px-4 md:px-10 py-2 rounded-full uppercase underline lg:text-2xl tracking-widest text-gray-500 transition-all hover:text-[#e17e7e] font-bold text-xl;
+    @apply text-[2.5vh] px-[2vh] py-[1.5vh] rounded-full uppercase underline tracking-widest text-gray-500 transition-all hover:text-[#e17e7e] font-bold;
   }
 
   .highlight-text {
@@ -12,10 +12,18 @@
   }
 
   .contact-input {
-    @apply outline-none bg-[#e7e7e7]/10 rounded-sm border-b px-6 py-4 border-[#E17E7E]/50 text-white transition-all placeholder-gray-500 focus:border-[#E17E7E] hover:border-[#E17E7E];
+    @apply outline-none bg-[#e7e7e7]/10 rounded-sm border-b p-[1vh] border-[#E17E7E]/50 text-white transition-all placeholder-gray-500 focus:border-[#E17E7E] hover:border-[#E17E7E] text-[2.5vh];
   }
 
   .custom-scrollbar {
     @apply scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E17E7E]/80;
+  }
+
+  .social-media-icon {
+    @apply w-[5vh] h-[5vh] !important;
+    svg {
+      width: 5vh !important;
+      height: 5vh !important;
+    }
   }
 }

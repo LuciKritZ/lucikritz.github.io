@@ -31,17 +31,17 @@ export default function Hero({ info, image = '' }: HeroProps) {
       <div className='z-20'>
         <h2
           className={cn(
-            'mobile-sm:text-sm text-lg md:text-xl uppercase text-gray-400 pb-5 tracking-[12px]',
+            'text-[3vh] uppercase text-gray-400 pb-[4vh] tracking-[2vh]',
             poorStory.className
           )}
         >
           Full Stack Software Engineer
         </h2>
-        <h1 className='mobile-sm:text-2xl text-3xl md:text-5xl lg:text-6xl font-semibold px-10'>
+        <h1 className='text-[3vh] font-semibold px-[4vh]'>
           <span>{text}</span>
           <Cursor cursorColor='#e17e7e' />
         </h1>
-        <div className='mobile-sm:pt-3 pt-5'>
+        <div className='pt-[2vh]'>
           {NAV_BTN_OPTIONS.map(({ id, name }) => (
             <Link key={id} href={id}>
               <button className={cn('hero-nav-btn', poorStory.className)}>

@@ -16,7 +16,7 @@ const ProjectBackground = () => {
           x: -300,
           opacity: 1,
         }}
-        className='absolute rounded-full top-0 bg-[#e17e7e]/5 right-0 h-[300px] w-[300px] z-[10] blur-3xl'
+        className='absolute rounded-full top-0 bg-[#e17e7e]/5 right-0 h-[30vh] w-[30vh] z-[10] blur-3xl'
       />
       <motion.div
         initial={{ x: 400, opacity: 0 }}
@@ -29,7 +29,7 @@ const ProjectBackground = () => {
           x: 0,
           opacity: 1,
         }}
-        className='absolute rounded-full top-[20%] bg-[#e17e7e]/5 left-0 h-[250px] w-[250px] z-[10] blur-3xl'
+        className='absolute rounded-full top-[20%] bg-[#e17e7e]/5 left-0 h-[25vh] w-[25vh] z-[10] blur-3xl'
       />
       <motion.div
         initial={{ x: -400, opacity: 0 }}
@@ -42,7 +42,7 @@ const ProjectBackground = () => {
           x: 0,
           opacity: 1,
         }}
-        className='absolute rounded-full top-[calc(50%)] bg-[#e17e7e]/5 right-0 h-[300px] w-[300px] z-[10] blur-3xl'
+        className='absolute rounded-full top-[calc(50%)] bg-[#e17e7e]/5 right-0 h-[30vh] w-[30vh] z-[10] blur-3xl'
       />
       <motion.div
         initial={{ x: 400, opacity: 0 }}
@@ -55,7 +55,7 @@ const ProjectBackground = () => {
           x: 300,
           opacity: 1,
         }}
-        className='absolute rounded-full bottom-0 left-0 bg-[#e17e7e]/5 h-[350px] w-[350px] z-[10] blur-3xl'
+        className='absolute rounded-full bottom-0 left-0 bg-[#e17e7e]/5 h-[35vh] w-[35vh] z-[10] blur-3xl'
       />
     </>
   );

@@ -12,7 +12,7 @@ type NavBarProps = {
 
 export default function NavBar({ socials }: NavBarProps) {
   return (
-    <header className='sticky top-0 flex flex-row justify-between max-w-7xl mx-auto z-40 xl:items-center p-5'>
+    <header className='sticky top-0 flex flex-row justify-between max-w-7xl mx-auto z-40 xl:items-center p-5 h-[12vh]'>
       <div className='flex flex-row items-center'>
         {socials.map(({ _id, link, title }, index) => (
           <motion.div
