@@ -1,7 +1,8 @@
-import PortableTextParser from '@/components/portable-text-parser';
-import { Project } from '@/typings';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import PortableTextParser from '@/components/portable-text-parser';
+import { Project } from '@/typings';
 
 type ProjectCardProps = {
   project: Project;

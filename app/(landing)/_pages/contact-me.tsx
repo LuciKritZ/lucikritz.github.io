@@ -1,14 +1,17 @@
 'use client';
 
+import { useState } from 'react';
+
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { SocialIcon } from 'react-social-icons';
+
+import { Social } from '@/typings';
+import { EMAIL_REGEX_PATTERN } from '@/utils/email';
+
 import SectionContainer from '../_components/section/container.section';
 import SectionHeader from '../_components/section/header.section';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { EMAIL_REGEX_PATTERN } from '@/utils/email';
-import { useState } from 'react';
-import { Social } from '@/typings';
-import { motion } from 'framer-motion';
-import { SocialIcon } from 'react-social-icons';
 
 type ContactMeProps = {
   email: string;

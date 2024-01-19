@@ -3,8 +3,9 @@
 import Chip from '@/components/chip';
 import PortableTextParser from '@/components/portable-text-parser';
 import { MyInfo, Skill } from '@/typings';
-import SectionHeader from '../_components/section/header.section';
+
 import SectionContainer from '../_components/section/container.section';
+import SectionHeader from '../_components/section/header.section';
 
 type AboutProps = {
   description: MyInfo['aboutMe'];

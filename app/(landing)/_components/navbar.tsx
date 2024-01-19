@@ -1,9 +1,10 @@
 'use client';
 
-import { Social } from '@/typings';
-import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { SocialIcon } from 'react-social-icons';
+
+import { Social } from '@/typings';
 
 type NavBarProps = {
   socials: Social[];

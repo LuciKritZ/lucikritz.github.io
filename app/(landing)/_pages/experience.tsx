@@ -1,7 +1,8 @@
 import { Experience } from '@/typings';
+
+import ExperienceCard from '../_components/cards/experience.card';
 import SectionContainer from '../_components/section/container.section';
 import SectionHeader from '../_components/section/header.section';
-import ExperienceCard from '../_components/cards/experience.card';
 
 type ExperienceProps = {
   experiences: Experience[];

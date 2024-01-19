@@ -1,9 +1,10 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
 import { GenericReactElement } from '@/typings';
 import { cn } from '@/utils/cn';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 type Props = {
   children: GenericReactElement;

@@ -1,10 +1,13 @@
-import type { NextRequest } from 'next/server';
-import { client as sanityClient } from '../../../sanity/lib/client';
 import { Experience } from '@/typings';
+
+import { client as sanityClient } from '../../../sanity/lib/client';
+import { ErrorHandler } from '../error-handler';
 import { GET_EXPERIENCES } from '../queries';
 
-export async function GET(_req: NextRequest) {
+async function getExperiences() {
   const experiences: Experience[] = await sanityClient.fetch(GET_EXPERIENCES);
 
   return Response.json({ experiences }, { status: 200 });
 }
+
+export const GET = ErrorHandler(getExperiences);

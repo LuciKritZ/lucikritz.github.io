@@ -1,13 +1,15 @@
 'use client';
 
+import Link from 'next/link';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import BackgroundDesign from '../_components/background-design';
+
+import { NAV_BTN_OPTIONS } from '@/constants/nav.constants';
 import { MyInfo } from '@/typings';
 import { cn } from '@/utils/cn';
-import Link from 'next/link';
-import HeroImage from '../_components/hero-image';
 import { poorStory } from '@/utils/fonts';
-import { NAV_BTN_OPTIONS } from '@/constants/nav.constants';
+
+import BackgroundDesign from '../_components/background-design';
+import HeroImage from '../_components/hero-image';
 
 type HeroProps = {
   info: MyInfo;

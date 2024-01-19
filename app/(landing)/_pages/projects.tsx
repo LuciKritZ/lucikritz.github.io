@@ -1,8 +1,9 @@
+import { Project } from '@/typings';
+
+import ProjectCard from '../_components/cards/project.card';
+import ProjectsBackground from '../_components/projects-background';
 import SectionContainer from '../_components/section/container.section';
 import SectionHeader from '../_components/section/header.section';
-import ProjectsBackground from '../_components/projects-background';
-import { Project } from '@/typings';
-import ProjectCard from '../_components/cards/project.card';
 
 type ProjectsProps = {
   projects: Project[];

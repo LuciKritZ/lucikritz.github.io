@@ -1,11 +1,12 @@
 'use client';
 
-import { Experience } from '@/typings';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import PortableTextParser from '@/components/portable-text-parser';
-import Chip from '@/components/chip';
+import Image from 'next/image';
 import Link from 'next/link';
+
+import Chip from '@/components/chip';
+import PortableTextParser from '@/components/portable-text-parser';
+import { Experience } from '@/typings';
 import { formatDateForExperience } from '@/utils/date';
 
 type ExperienceCardProps = {

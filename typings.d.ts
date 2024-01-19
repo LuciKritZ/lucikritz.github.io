@@ -78,6 +78,7 @@ export interface MyInfo extends SanityCommonStructure {
   name: string;
   designation: string;
   heroImage: SanityImageStructure;
+  heroImageURL?: string;
   resumeLink: string;
   aboutMe: SanityBlockStructure[];
   phone: string;
