@@ -17,7 +17,7 @@ const HeroImage = ({ image, name }: HeroImageProps) => {
         opacity: 1,
         animation: 'ease-in-out',
       }}
-      className='mobile-sm:h-[36] mobile-sm:w-[36] relative rounded-full h-40 w-40 md:h-32 md:w-32 mx-auto'
+      className='relative rounded-full h-[20vh] w-[20vh] max-h-40 max-w-40 mx-auto'
     >
       <Image
         className='object-cover'

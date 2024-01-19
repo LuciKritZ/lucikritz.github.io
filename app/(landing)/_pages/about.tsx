@@ -17,22 +17,19 @@ const About = ({ description, skills }: AboutProps) => {
     <SectionContainer className='w-screen'>
       <SectionHeader>About</SectionHeader>
 
-      <div className='text-[2vh] sm:text-[3vh] md:text-[24px] overflow-scroll flex flex-col justify-between md:tracking-wider z-20 mt-10'>
+      <div className='text-[3.5vh] overflow-hidden flex flex-col justify-between md:tracking-wider z-20 overflow-y-scroll py-[3vh] mt-[18vh]'>
         <div className='flex justify-start'>
           <PortableTextParser blocks={description} />
         </div>
-        <div className='flex flex-wrap mt-10 justify-center text-start overflow-y-auto xl:max-h-[30vh] max-h-[25vh] custom-scrollbar scrollbar-thin'>
+        <div className='flex flex-wrap gap-[1vh] overflow-y-auto mt-[4vh]'>
           {skills.map(({ _id, title }) => (
-            <Chip
-              key={_id}
-              className='text-[2vh] sm:text-[3vh] md:text-[24px] mx-2 my-2'
-            >
+            <Chip key={_id} className='text-[2.5vh]'>
               {title}
             </Chip>
           ))}
         </div>
       </div>
-      <div className='absolute bottom-0 left-0 h-[300px] w-[300px] blur-3xl z-10 rounded-full bg-[#e17e7e]/20' />
+      <div className='absolute bottom-0 left-0 h-[30vh] w-[30vh] blur-3xl z-10 rounded-full bg-[#e17e7e]/20' />
     </SectionContainer>
   );
 };

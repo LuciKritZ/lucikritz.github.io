@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     companyLink,
   } = experience;
   return (
-    <article className='mobile-sm:w-[100%] mobile-sm:space-y-0 flex flex-col rounded-lg items-center space-y-4 sm:space-y-7 flex-shrink-0 w-[360px] sm:w-[436px] md:w-[600px] xl:w-[900px] snap-center bg-[#e7e7e7]/10 p-4 relative overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-[1vh] flex-shrink-0 max-w-[900px] w-[75vw] snap-center bg-[#e7e7e7]/10 p-[2vh] relative overflow-y-scroll'>
       <motion.div
         initial={{
           y: -100,
@@ -54,33 +54,28 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         />
       </motion.div>
 
-      <div className='mobile-sm:px-0 px-0 sm:px-6 md:px-10 z-[11]'>
-        <h4 className='mobile-sm:text-[16px] mobile-sm:tracking-wide text-3xl sm:text-4xl font-light'>
-          {jobTitle}
-        </h4>
+      <div className='z-[11]'>
+        <h4 className='text-[3vh] tracking-normal font-light'>{jobTitle}</h4>
         <Link href={companyLink} target='_blank'>
-          <p className='mobile-sm:text-[16px] font-bold text-xl sm:text-2xl mt-1'>{`${company}${
+          <p className='text-[3vh] font-bold mt-[1vh]'>{`${company}${
             isRemote ? ', Remote' : ''
           }`}</p>
         </Link>
 
-        <p className='mobile-sm:text-[12px] uppercase mobile-sm:py-2 py-4 sm:py-5 text-gray-300'>
+        <p className='uppercase py-[1vh] text-gray-300'>
           {formatDateForExperience(startDate)} —{' '}
           {isCurrent ? 'Current' : formatDateForExperience(endDate)}
         </p>
 
-        <div className='flex flex-wrap gap-4 mobile-sm:hidden overflow-y-auto'>
+        <div className='flex flex-wrap gap-[0.75vh] overflow-y-auto'>
           {techTags.map(({ _id, title }) => (
-            <Chip
-              key={_id}
-              className='text-[16px] sm:text-[20px] min-h-[20px] mobile-sm:text-[12px]'
-            >
+            <Chip key={_id} className='text-[2vh]'>
               {title}
             </Chip>
           ))}
         </div>
 
-        <div className='mobile-sm:h-[300px] flex flex-col overflow-y-auto mobile-sm:text-[16px]'>
+        <div className='flex flex-col overflow-y-auto text-[3vh] mt-[2vh]'>
           <PortableTextParser blocks={description} />
         </div>
       </div>

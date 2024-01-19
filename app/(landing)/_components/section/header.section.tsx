@@ -11,7 +11,7 @@ const SectionHeader = ({ className = '', children }: SectionHeaderProps) => {
   return (
     <h3
       className={cn(
-        'mobile-sm:text-[50px] absolute top-24 text-[#e17e7e] md:text-[80px] text-[60px]',
+        'text-[8vh] absolute top-[10vh] text-[#e17e7e]',
         className,
         nothingYouCouldDo.className
       )}

@@ -10,9 +10,9 @@ type ExperienceProps = {
 
 const Experience = ({ experiences }: ExperienceProps) => {
   return (
-    <SectionContainer className='relative overflow-hidden flex-col text-left md:flex-row px-10 mx-auto items-center justify-center'>
+    <SectionContainer className='relative overflow-hidden flex-col text-left md:flex-row mx-auto items-center justify-center'>
       <SectionHeader>Experience</SectionHeader>
-      <div className='w-full flex space-x-5 overflow-x-auto p-6 sm:p-10 snap-x snap-mandatory mt-40 sm:mt-44 custom-scrollbar overflow-y-hidden mobile-sm:space-x-2 mobile-sm:p-0 mobile-sm:pb-2'>
+      <div className='w-full flex space-x-[2vh] overflow-x-auto p-[5vh] snap-x snap-mandatory mt-[18vh]  custom-scrollbar overflow-y-hidden'>
         {[...experiences].map((experience) => (
           <ExperienceCard experience={experience} key={experience._id} />
         ))}
