@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero-nav-btn {
+    @apply mobile-sm:text-lg mobile-sm:px-2 px-4 md:px-10 py-2 rounded-full uppercase underline lg:text-2xl tracking-widest text-gray-500 transition-all hover:text-[#e17e7e] font-bold text-xl;
+  }
+
+  .highlight-text {
+    @apply underline decoration-[2px] decoration-slice decoration-[#E17E7E] hover:text-[#E17E7E] hover:bg-transparent hover:no-underline transition-all ease-linear;
+  }
+
+  .contact-input {
+    @apply outline-none bg-[#e7e7e7]/10 rounded-sm border-b px-6 py-4 border-[#E17E7E]/50 text-white transition-all placeholder-gray-500 focus:border-[#E17E7E] hover:border-[#E17E7E];
+  }
+
+  .custom-scrollbar {
+    @apply scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#E17E7E]/80;
+  }
+}
