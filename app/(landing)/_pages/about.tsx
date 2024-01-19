@@ -17,13 +17,13 @@ const About = ({ description, skills }: AboutProps) => {
     <SectionContainer className='w-screen'>
       <SectionHeader>About</SectionHeader>
 
-      <div className='text-[3.5vh] overflow-hidden flex flex-col justify-between md:tracking-wider z-20 overflow-y-scroll py-[3vh] mt-[18vh]'>
+      <div className='max-h-[70vh] text-[2.25vh] overflow-hidden flex flex-col justify-between md:tracking-wider z-20 overflow-y-scroll py-[3vh] mt-[10vh]'>
         <div className='flex justify-start'>
           <PortableTextParser blocks={description} />
         </div>
         <div className='flex flex-wrap gap-[1vh] overflow-y-auto mt-[4vh]'>
           {skills.map(({ _id, title }) => (
-            <Chip key={_id} className='text-[2.5vh]'>
+            <Chip key={_id} className='text-[2vh]'>
               {title}
             </Chip>
           ))}
