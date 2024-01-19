@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
+
+[Portfolio](https://lucikritz.github.io/) is a portfolio created by [LuciKritZ](https://github.com/LuciKritZ). Technologies used are as follows:
+
+1. [Next.js 14](https://github.com/vercel/next.js)
+2. [Sanity](https://sanity.io/)
+3. [Tailwind CSS](https://tailwindcss.com/)
+4. [Framer Motion](https://www.framer.com/motion/)
 
 ## Getting Started
 
-First, run the development server:
+### Local Machine
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Have both [npm](https://www.npmjs.com/) and [node](https://nodejs.org/en/) installed
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run `npm i -g @sanity/cli` to install Sanity globally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run `npm install` to install dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Run `npm run dev:local`
 
-## Learn More
+   - This will clear the cache and start dev server of Next.JS.
 
-To learn more about Next.js, take a look at the following resources:
+5. Run `npm run sanity:dev` in a separate terminal
+   - This will start the development server of Sanity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Typescript
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is developed completely in TypeScript.
 
-## Deploy on Vercel
+[Crash course](https://www.youtube.com/watch?v=1jMJDbq7ZX4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Engines
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Consult the `"engines"` section of package.json for the recommended version of **node**, and **npm**.
+
+### What if my node or npm version is not accepted?
+
+- Compatible versions of node and npm are tightly coupled; if one or the other is not compatible, run: `nvm install`.
+
+<!-- TODO -->
+<!-- ## Release Notes [In Progress]
+
+See [Deployments](https://github.com/LuciKritZ/lucion/deployments) -->
+
+## Environment Variables in Use Today
+
+The application currently has 6 environment variables:
+
+1. `SANITY_STUDIO_PROJECT_ID`
+
+   - **What it is**: It's the project ID created in your sanity account.
+   - **Where it comes from**: [Sanity](https://sanity.io/manage) -> Login -> Manage Projects -> Click on your project -> Search for Project ID.
+
+2. `SANITY_STUDIO_DATASET`
+
+   - **What it is**: Name of the dataset which you create inside your Sanity project.
+   - **Where it comes from**: [Sanity](https://sanity.io/manage) -> Login -> Manage -> Manage Projects -> Click on your project -> Datasets -> Name of the Dataset (Example: production/dev).
+
+3. `NEXT_PUBLIC_BASE_URL`
+
+   - **What it is**: Base URL of your deployed project. Example: localhost:3000 when running locally.
+
+## Shout out to
+
+[SonnySangha](https://www.youtube.com/@SonnySangha) for an amazing tutorial on youtube.
