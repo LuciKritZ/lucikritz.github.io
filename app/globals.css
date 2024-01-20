@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.body {
+  background: #191919;
+}
+
 @layer components {
   .hero-nav-btn {
     @apply text-[2.5vh] px-[2vh] py-[1.5vh] rounded-full uppercase underline tracking-widest text-gray-500 transition-all hover:text-[#e17e7e] font-bold;
