@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     companyLink,
   } = experience;
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-[1vh] flex-shrink-0 max-w-[900px] w-[75vw] snap-center bg-[#e7e7e7]/10 p-[2vh] relative overflow-y-scroll'>
+    <article className='flex flex-col rounded-lg items-center space-y-[1vh] flex-shrink-0 max-w-[820px] w-[75vw] snap-center bg-[#e7e7e7]/10 p-[2vh] relative overflow-y-scroll max-h-[60vh]'>
       <motion.div
         initial={{
           y: -100,

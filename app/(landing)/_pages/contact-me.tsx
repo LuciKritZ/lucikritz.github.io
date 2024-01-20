@@ -63,7 +63,7 @@ const ContactMe = ({ email, phone, socials }: ContactMeProps) => {
     <SectionContainer className='flex overflow-hidden flex-col text-left md:flex-row justify-evenly mx-auto items-center z-0 truncate'>
       <SectionHeader>Hit me up!</SectionHeader>
 
-      <div className='flex flex-col mt-[18vh] space-y-[4vh] justify-end items-center mx-[5vh] max-h-[80vh] overflow-y-auto'>
+      <div className='flex flex-col mt-[18vh] space-y-[4vh] justify-start items-center mx-[5vh] max-h-[70vh] overflow-y-auto'>
         <div className='flex flex-col space-y-[2vh]'>
           <div className='flex items-center space-x-[1vh]'>
             <PhoneIcon className='text-[#e17e7e] h-[3vh] animate-pulse' />
