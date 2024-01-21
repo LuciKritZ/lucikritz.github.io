@@ -1,6 +1,8 @@
-import { Poor_Story } from 'next/font/google';
-import { Space_Grotesk } from 'next/font/google';
-import { Nothing_You_Could_Do } from 'next/font/google';
+import {
+  Poor_Story,
+  Space_Grotesk,
+  Nothing_You_Could_Do,
+} from 'next/font/google';
 
 export const poorStory = Poor_Story({ subsets: ['latin'], weight: '400' });
 
