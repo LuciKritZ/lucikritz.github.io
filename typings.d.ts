@@ -1,5 +1,6 @@
-import type { Image } from 'sanity';
 import { ReactElement, ReactNode } from 'react';
+
+import type { Image } from 'sanity';
 
 export type FCVanillaProviderType = {
   children: ReactNode;
@@ -19,6 +20,14 @@ export interface SanityImageStructure extends Image {
   asset: {
     _ref: string;
     _type: 'reference';
+  };
+}
+
+export interface GenerateUrlBuilder {
+  source: Image;
+  size?: {
+    width: number;
+    height: number;
   };
 }
 
@@ -68,6 +77,7 @@ export interface Experience extends SanityCommonStructure {
   description: SanityBlockStructure[];
   companyImage: SanityImageStructure;
   companyImageUrl?: string;
+  cursorImageUrl?: string;
   jobTitle: string;
   techTags: Skill[];
 }

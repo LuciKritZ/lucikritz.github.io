@@ -16,21 +16,24 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
   const socials: LandingPageProps['socials'] = await fetchSocials();
 
   return {
-    myInfo: { ...myInfo, heroImageURL: generateImageUrl(myInfo.heroImage) },
+    myInfo: {
+      ...myInfo,
+      heroImageURL: generateImageUrl({ source: myInfo.heroImage }),
+    },
     experiences: experiences.map((experience) => ({
       ...experience,
-      companyImageUrl: generateImageUrl(experience.companyImage),
+      companyImageUrl: generateImageUrl({ source: experience.companyImage }),
       techTags: experience.techTags.map((techTag) => ({
         ...techTag,
-        imageUrl: generateImageUrl(techTag.image),
+        imageUrl: generateImageUrl({ source: techTag.image }),
       })),
     })),
     projects: projects.map((project) => ({
       ...project,
-      imageUrl: generateImageUrl(project.image),
+      imageUrl: generateImageUrl({ source: project.image }),
       techTags: project.techTags.map((techTag) => ({
         ...techTag,
-        imageUrl: generateImageUrl(techTag.image),
+        imageUrl: generateImageUrl({ source: techTag.image }),
       })),
     })),
     skills: skills.map((skill) => ({
