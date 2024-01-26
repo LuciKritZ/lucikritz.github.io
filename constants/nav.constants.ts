@@ -8,6 +8,10 @@ export const NAV_BTN_OPTIONS = [
     id: '#experience',
   },
   {
+    name: 'Testimonials',
+    id: '#testimonials',
+  },
+  {
     name: 'Projects',
     id: '#projects',
   },

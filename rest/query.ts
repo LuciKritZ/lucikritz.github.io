@@ -1,4 +1,11 @@
-import { Experience, MyInfo, Project, Skill, Social } from '@/typings';
+import {
+  Experience,
+  MyInfo,
+  Project,
+  Skill,
+  Social,
+  Testimonial,
+} from '@/typings';
 import fetchQuery from '@/utils/fetch-query';
 
 export const fetchSkills = async (): Promise<Skill[]> => {
@@ -24,4 +31,9 @@ export const fetchExperiences = async (): Promise<Experience[]> => {
 export const fetchProjects = async (): Promise<Project[]> => {
   const projects = await fetchQuery<Project[]>('projects');
   return projects;
+};
+
+export const fetchTestimonials = async (): Promise<Testimonial[]> => {
+  const testimonials = await fetchQuery<Testimonial[]>('testimonials');
+  return testimonials;
 };

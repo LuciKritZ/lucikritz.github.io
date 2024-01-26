@@ -58,6 +58,13 @@ export interface Social extends SanityCommonStructure {
   link: string;
 }
 
+export interface Testimonial extends SanityCommonStructure {
+  _type: 'testimonial';
+  by: string;
+  link: string;
+  content: SanityBlockStructure[];
+}
+
 export interface Skill extends SanityCommonStructure {
   _type: 'skill';
   image: SanityImageStructure;
@@ -111,4 +118,5 @@ export interface CombinedTypingsForLandingPage {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
+  testimonials: Testimonial[];
 }

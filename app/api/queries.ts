@@ -32,3 +32,9 @@ export const GET_SOCIALS = groq`
     ...,
   }
 `;
+
+export const GET_TESTIMONIALS = groq`
+  *[_type == "testimonials"] | order(_createdAt asc) {
+    ...,
+  }
+`;

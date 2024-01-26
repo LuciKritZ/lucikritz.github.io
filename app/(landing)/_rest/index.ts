@@ -4,6 +4,7 @@ import {
   fetchProjects,
   fetchSkills,
   fetchSocials,
+  fetchTestimonials,
 } from '@/rest';
 import { generateImageUrl } from '@/sanity/lib/image';
 import { CombinedTypingsForLandingPage as LandingPageProps } from '@/typings';
@@ -14,6 +15,8 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
   const projects: LandingPageProps['projects'] = await fetchProjects();
   const skills: LandingPageProps['skills'] = await fetchSkills();
   const socials: LandingPageProps['socials'] = await fetchSocials();
+  const testimonials: LandingPageProps['testimonials'] =
+    await fetchTestimonials();
 
   return {
     myInfo: {
@@ -40,5 +43,6 @@ export const getLandingPageData = async (): Promise<LandingPageProps> => {
       ...skill,
     })),
     socials,
+    testimonials,
   };
 };

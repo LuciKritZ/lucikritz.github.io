@@ -30,13 +30,25 @@ const defaultPortableTextComponents: Partial<PortableTextReactComponents> = {
 type PortableTextParserProps = {
   blocks: any;
   portableTextComponents?: typeof defaultPortableTextComponents;
+  className?: string;
 };
 
 const PortableTextParser: React.FC<PortableTextParserProps> = ({
   blocks,
   portableTextComponents = defaultPortableTextComponents,
+  className = '',
 }: PortableTextParserProps) => {
-  return <PortableText value={blocks} components={portableTextComponents} />;
+  return (
+    <PortableText
+      value={blocks}
+      components={{
+        ...portableTextComponents,
+        block: {
+          normal: ({ children }) => <p className={className}>{children}</p>,
+        },
+      }}
+    />
+  );
 };
 
 export default PortableTextParser;
