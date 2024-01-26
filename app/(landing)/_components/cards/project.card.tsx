@@ -18,7 +18,7 @@ const ProjectCard = ({
   return (
     <div
       key={_id}
-      className='flex-shrink-0 snap-center flex flex-col space-y-[2vh] items-center justify-start bg-[#e7e7e7]/10 overflow-hidden rounded-lg w-[65vw] h-[65vh] max-w-[550px]'
+      className='flex-shrink-0 snap-center flex flex-col space-y-[2vh] items-center justify-start bg-[#e7e7e7]/10 overflow-hidden rounded-lg w-[60vw] h-[60vh] max-w-[500px]'
     >
       <Link target='_blank' href={link} className='w-full'>
         <div className='h-[30vh] relative flex justify-center items-center w-full hover:grayscale'>
